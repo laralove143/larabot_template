@@ -1,0 +1,45 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "command": "iex -S mix",
+      "label": "bot",
+      "presentation": {
+        "clear": true,
+        "focus": true
+      },
+      "problemMatcher": [],
+      "type": "shell"
+    },
+    {
+      "command": "trap '/opt/homebrew/opt/postgresql@18/bin/pg_ctl -D /opt/homebrew/var/postgresql@18 stop' EXIT; /opt/homebrew/opt/postgresql@18/bin/postgres -D /opt/homebrew/var/postgresql@18 & wait",
+      "label": "postgres",
+      "presentation": {
+        "clear": true,
+        "focus": true
+      },
+      "problemMatcher": [],
+      "type": "shell"
+    },
+    {
+      "command": "mix compile && mix dialyzer && mix credo --strict",
+      "label": "lint",
+      "presentation": {
+        "clear": true,
+        "focus": true
+      },
+      "problemMatcher": [],
+      "type": "shell"
+    },
+    {
+      "command": "mix deps.update larabot && rm -rf .elixir_ls",
+      "label": "update larabot",
+      "presentation": {
+        "clear": true,
+        "focus": true
+      },
+      "problemMatcher": [],
+      "type": "shell"
+    }
+  ]
+}

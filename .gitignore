@@ -1,0 +1,9 @@
+*.ez
+/_build/
+/.elixir_ls/
+/cover/
+/deps/
+/doc/
+/tmp/
+erl_crash.dump
+larabot-*.tar
